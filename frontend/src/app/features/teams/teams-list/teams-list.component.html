@@ -1,0 +1,21 @@
+<div class="teams-list">
+  <h1>Teams</h1>
+
+  @if (!loaded) {
+    <p>Loading teams…</p>
+  } @else if (error) {
+    <p class="error">{{ error }}</p>
+  } @else {
+    <ul class="team-cards">
+      @for (team of teams; track team.id) {
+        <li>
+          <a [routerLink]="['/teams', team.id]" class="card">
+            <span class="name">{{ team.name }}</span>
+            <span class="sport">{{ team.sport }}</span>
+            <span class="members">{{ team.memberCount }} members</span>
+          </a>
+        </li>
+      }
+    </ul>
+  }
+</div>

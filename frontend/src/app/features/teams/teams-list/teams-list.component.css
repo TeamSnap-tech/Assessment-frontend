@@ -1,0 +1,45 @@
+.teams-list {
+  padding: calc(var(--spacing-unit) * 3);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.teams-list h1 {
+  margin-top: 0;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+.team-cards {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: calc(var(--spacing-unit) * 2);
+}
+
+.team-cards .card {
+  display: block;
+  padding: calc(var(--spacing-unit) * 2);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: inherit;
+}
+
+.team-cards .card:hover {
+  border-color: var(--color-primary);
+  background: #f8fafc;
+}
+
+.team-cards .name {
+  display: block;
+  font-weight: 600;
+}
+
+.team-cards .sport,
+.team-cards .members {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
